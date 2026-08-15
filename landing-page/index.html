@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JUZOVA — Voyagez plus, dépensez moins</title>
+
+    <meta
+        name="description"
+        content="Découvrez une nouvelle façon de voyager avec JUZOVA et Thomas, votre conseiller virtuel."
+    >
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <div class="hero-overlay"></div>
+
+       <nav class="navigation">
+    <a class="brand" href="#" aria-label="Accueil JUZOVA">
+        <img
+            src="JUZO LOGO OFFICIEL.png"
+            alt="Logo JUZOVA"
+            class="brand-logo"
+        >
+    </a>
+
+      
+<ul class="nav-links">
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#concept">Le concept</a></li>
+    <li><a href="#comparatif">Comparer</a></li>
+    <li>
+<a href="#" id="open-remuneration">
+    Plan de rémunération
+</a>
+    </li>
+    <li>
+    <a href="#" id="open-videos">
+        🎥 Vidéos
+    </a>
+</li>
+<li>
+    <a href="#" id="open-inspirations">
+        ✨ Inspirations voyage
+    </a>
+</li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+   
+</nav>
+
+        <main class="hero-content">
+
+            <section class="hero-copy">
+                <p class="eyebrow">Une nouvelle expérience du voyage</p>
+
+                <h1>
+                    Voyagez plus.
+                    <span>Dépensez moins.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Découvrez une manière plus simple, plus intelligente et plus
+                    humaine de préparer vos voyages, accompagné par Thomas,
+                    votre conseiller virtuel JUZOVA.
+                </p>
+
+                <div class="hero-actions">
+    <a href="#concept" class="button button-primary">
+        Découvrir le concept
+    </a>
+
+    <button class="button button-secondary" id="open-agentova-question" type="button">
+        Poser une question
+    </button>
+</div>
+                <div class="trust-row">
+                    <span>Disponible 24 h/24</span>
+                    <span>Découverte gratuite</span>
+                    <span>Sans engagement</span>
+                </div>
+            </section>
+
+            <aside class="thomas-card" aria-label="Présentation de Thomas">
+                <div class="thomas-visual">
+    <img src="thomas.png" alt="Thomas" class="thomas-photo">
+</div>
+
+                <div class="thomas-message">
+                    <p class="thomas-label">Votre conseiller virtuel</p>
+
+                    <h2>Bonjour, je suis Thomas.</h2>
+
+                    <p>
+                        Je vous accompagne pour découvrir JUZOVA, répondre à vos
+                        questions et vous orienter simplement, sans pression.
+                    </p>
+
+                    <button class="thomas-button" id="open-agentova" type="button">
+                        Commencer avec Thomas
+                    </button>
+                </div>
+            </aside>
+
+        </main>
+
+        
+       
+
+    </header>
+
+    <section id="decouverte" class="intro-section">
+       <section class="features" id="concept">
+
+    <h2>Pourquoi choisir JUZOVA&nbsp;?</h2>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <div class="feature-icon">🧳</div>
+            <h3>Voyagez sans stress</h3>
+            <p>
+                Thomas vous accompagne avant, pendant et après votre voyage.
+                Toutes vos réponses au même endroit.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Économisez</h3>
+            <p>
+                Comparez facilement les meilleures options
+                et réduisez le coût de vos voyages.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>Disponible 24 h/24</h3>
+            <p>
+                Votre conseiller virtuel reste disponible
+                quand vous en avez besoin.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+    </section>
+
+    <div class="thomas-panel" id="thomas-panel" aria-hidden="true">
+        <button class="panel-close" type="button" data-close-thomas aria-label="Fermer">
+            ×
+        </button>
+
+        <p class="thomas-label">Thomas · Conseiller virtuel JUZOVA</p>
+
+        <h2>Comment puis-je vous aider ?</h2>
+
+        <p>
+            La connexion réelle avec Agentova sera ajoutée ici. Pour l’instant,
+            cette fenêtre nous permet de tester l’expérience.
+        </p>
+
+        <button class="quick-question" id="question-fonctionnement" type="button">
+    Comment fonctionne JUZOVA ?
+</button>
+
+        <button class="quick-question" type="button">
+            Quels sont les avantages ?
+        </button>
+
+        <button class="quick-question" type="button">
+            Est-ce fait pour moi ?
+        </button>
+        
+    </div>
+
+    
+<div class="panel-backdrop" id="panel-backdrop"></div>
+<div class="thomas-workspace"></div>
+<div id="agentova-chat" class="agentova-chat">
+    <button id="close-agentova-chat" type="button" aria-label="Fermer le chat">×</button>
+    <iframe
+        src="https://widget.agentova.ai/embed/4d4d9cd8-e972-4777-a051-7121526e38db"
+        title="Thomas - Conseiller JUZOVA">
+    </iframe>
+    
+
+<!-- Zone d'affichage des supports visuels de Thomas -->
+ <!-- Bouton support visuel Voyage -->
+  <button id="show-grossiste" class="thomas-slide-trigger" type="button">
+    👁 Voir l’illustration
+</button>
+</div>
+
+<div id="thomas-visual" class="thomas-slide-modal">
+    <button id="close-thomas-visual" type="button" aria-label="Fermer l'image">×</button>
+    <img id="thomas-visual-image" src="" alt="Support visuel présenté par Thomas">
+    <div class="thomas-visual-nav">
+    <button id="thomas-visual-prev" type="button">← Précédent</button>
+    <span id="thomas-visual-counter">1 / 5</span>
+    <div class="thomas-visual-categories">
+    <button id="slides-voyage" type="button">✈️ Voyage</button>
+    <button id="slides-revenus" type="button">💰 Revenus</button>
+</div>
+    <div id="thomas-visual-dots" class="thomas-visual-dots">
+    <button class="dot active" type="button" data-slide-index="0">1</button>
+<button class="dot" type="button" data-slide-index="1">2</button>
+<button class="dot" type="button" data-slide-index="2">3</button>
+<button class="dot" type="button" data-slide-index="3">4</button>
+<button class="dot" type="button" data-slide-index="4">5</button>
+<button class="dot" type="button" data-slide-index="5">6</button>
+<button class="dot" type="button" data-slide-index="6">7</button>
+<button class="dot" type="button" data-slide-index="7">8</button>
+<button class="dot" type="button" data-slide-index="8">9</button>
+<button class="dot" type="button" data-slide-index="9">10</button>
+<button class="dot" type="button" data-slide-index="10">11</button>
+<button class="dot" type="button" data-slide-index="11">12</button>
+</div>
+    <button id="thomas-visual-next" type="button">Suivant →</button>
+</div>
+</div>
+
+</div> <!-- fin thomas-workspace -->
+
+<section id="comparatif" class="comparison-section">
+    <div class="comparison-container">
+
+        <p class="comparison-kicker">EXEMPLE DE COMPARAISON</p>
+        <h2>Un même séjour. Une vraie différence de prix.</h2>
+        <p class="comparison-intro">
+            Smyth Tribeca — New York · 7 nuits · 2 adultes · du 12 au 19 septembre 2026
+        </p>
+<div class="comparison-grid">
+        <div class="comparison-card">
+<img src="smtyh-tribeca-hd.jpg" alt="Chambre Superior King du Smyth Tribeca à New York" class="comparison-image">
+            <div class="comparison-hotel">
+                <h3>Smyth Tribeca — New York</h3>
+                <p>Chambre King Supérieure</p>
+            </div>
+
+            <div class="comparison-prices">
+
+                <div class="price-box">
+                    <span>Booking</span>
+                    <strong>4 842 €</strong>
+                </div>
+
+                <div class="price-box travel-advantage">
+                    <span>Travel Advantage</span>
+                    <strong>3 644,04 €</strong>
+                </div>
+
+            </div>
+
+            <div class="comparison-saving">
+                <span>ÉCONOMIE CONSTATÉE</span>
+                <strong>1 197,96 €</strong>
+                <p>soit environ 24,7 % d'économie</p>
+            </div>
+
+            <p class="comparison-note">
+                Comparaison effectuée pour le même hôtel, les mêmes dates et
+                2 adultes. Les conditions de réservation et d'annulation
+                peuvent différer selon les offres.
+            </p>
+
+        </div>
+        <div class="comparison-card">
+<img src="hotel-inattendu-paris.jpg" alt="Chambre Double Classique de l'Hôtel l'Inattendu à Paris" class="comparison-image">
+            <div class="comparison-hotel">
+                <h3>Hôtel l'Inattendu — Paris</h3>
+<p>Chambre Double Classique</p>
+            </div>
+
+            <div class="comparison-prices">
+
+                <div class="price-box">
+                    <span>Booking</span>
+                    <strong>4 566 €</strong>
+                </div>
+
+                <div class="price-box travel-advantage">
+                    <span>Travel Advantage</span>
+                    <strong>2 594,17 €</strong>
+                </div>
+
+            </div>
+
+            <div class="comparison-saving">
+                <span>ÉCONOMIE CONSTATÉE</span>
+                <strong>1 971,83 €</strong>
+<p>soit environ 43,2 % d'économie</p>
+            </div>
+
+            <p class="comparison-note">
+                Comparaison effectuée pour le même hôtel, les mêmes dates et
+                2 adultes. Les conditions de réservation et d'annulation
+                peuvent différer selon les offres.
+            </p>
+
+        </div>
+    
+    <div class="comparison-card">
+
+            <div class="comparison-hotel">
+                <img src="so-uptown-dubai.jpg" alt="Collection King Room du SO/ Uptown Dubai à Dubaï" class="comparison-image">
+            <h3>SO/ Uptown Dubai — Dubaï</h3>
+<p>Collection King Room</p>
+            </div>
+
+            <div class="comparison-prices">
+
+                <div class="price-box">
+                    <span>Booking</span>
+                    <strong>834 €</strong>
+                </div>
+
+                <div class="price-box travel-advantage">
+                    <span>Travel Advantage</span>
+                    <strong>523,33 €</strong>
+                </div>
+
+            </div>
+
+            <div class="comparison-saving">
+                <span>ÉCONOMIE CONSTATÉE</span>
+                <strong>310,67 €</strong>
+<p>soit environ 37,3 % d'économie</p>
+            </div>
+
+            <p class="comparison-note">
+                Comparaison effectuée pour le même hôtel, les mêmes dates et
+                2 adultes. Les conditions de réservation et d'annulation
+                peuvent différer selon les offres.
+            </p>
+
+        </div>
+        </div>
+</section>
+<section id="contact" class="contact-section">
+    <h2>Contactez JUZOVA</h2>
+
+    <p>
+        Une question ou envie d’échanger sur votre projet de voyage ?
+        Prenez rendez-vous avec nous simplement.
+    </p>
+
+    <a href="https://calendly.com/vincent-mwrlife/30min"
+   class="button button-primary"
+   target="_blank">
+    Prendre rendez-vous
+</a>
+    
+    
+</section>
+<!-- Fenêtre Plan de rémunération -->
+<div id="remuneration-modal" class="remuneration-modal">
+    <div class="remuneration-window">
+
+        <button
+            id="close-remuneration"
+            class="remuneration-close"
+            type="button"
+            aria-label="Fermer le plan de rémunération">
+            ×
+        </button>
+
+        <iframe
+            src="plan-remuneration.pdf"
+            title="Plan de rémunération JUZOVA">
+        </iframe>
+
+    </div>
+</div>
+<!-- Fenêtre Vidéos -->
+<div id="videos-modal" class="videos-modal">
+    <div class="videos-window">
+
+        <button
+            id="close-videos"
+            class="videos-close"
+            type="button"
+            aria-label="Fermer les vidéos">
+            ×
+        </button>
+
+        <h2>🎥 Vidéos</h2>
+        
+<p class="videos-intro">
+    Vous préférez découvrir notre univers en vidéo ?
+    Retrouvez ici plusieurs présentations pour mieux comprendre
+    JUZOVA, Travel Advantage et les différentes possibilités proposées.
+</p>
+     <div class="videos-content">
+
+<div class="video-cards">
+
+   <div class="video-card-choice"
+     onclick="window.open('https://www.m6.fr/un-jour-un-doc-p_22196/les-nouveaux-rois-des-vacances-a-prix-casses-c_13173486', '_blank')">
+
+    <div class="video-thumbnail">
+        ▶
+    </div>
+
+    <h3>📺 Reportage M6 – Les nouveaux rois des vacances à prix cassés</h3>
+
+    <p>
+        Découvrez le reportage officiel consacré notamment à Travel Advantage.<br><br>
+        <strong>Passages à regarder :</strong><br>
+        ⏱️ 4:30 → 9:00<br>
+        ⏱️ 17:00 → 23:00<br>
+        ⏱️ 30:30 → 35:20<br><br>
+        ▶ Cliquez ici pour voir le reportage officiel sur M6+
+    </p>
+
+</div>
+
+    <div class="video-card-choice youtube-card" data-youtube="L9Ee-eUuf28">
+
+        <div class="video-thumbnail">
+            ▶
+        </div>
+
+        <h3>👤 MWR Life — Travel Advantage par Vincent</h3>
+
+        <p>
+            Découvrez MWR Life, Travel Advantage
+            et le concept présenté par Vincent.
+        </p>
+
+    </div>
+    <div class="video-card-choice youtube-card"
+     data-youtube="eQ6_47xeXMw">
+
+    <div class="video-thumbnail">
+        ▶
+    </div>
+
+    <h3>📺 Travel Advantage sur BFM Business</h3>
+
+    <p>
+        Découvrez Travel Advantage présenté sur BFM Business
+        par notre vice-président français.
+    </p>
+
+    
+
+</div>
+
+</div>
+
+</div>
+
+    </div>
+</div>
+
+<!-- =========================
+     FENÊTRE INSPIRATIONS VOYAGE
+========================= -->
+
+<div id="inspirations-modal" class="inspirations-modal">
+
+    <div class="inspirations-window">
+
+        <button
+            id="close-inspirations"
+            class="inspirations-close"
+            type="button"
+            aria-label="Fermer les inspirations">
+            ×
+        </button>
+
+        <h2>✨ Inspirations voyage</h2>
+
+        <p class="inspirations-intro">
+            Et si votre prochain voyage commençait ici ?
+            Découvrez des destinations d'exception et imaginez
+            jusqu'où vos prochaines vacances pourraient vous emmener.
+        </p>
+
+        <div class="inspirations-content">
+
+            <div class="destinations-grid">
+              <div class="destination-card">
+
+    <img
+        src="bali-padma-resort.jpg"
+        alt="Padma Resort Ubud à Bali"
+        class="destination-image"
+    >
+
+    <div class="destination-info">
+
+        <h3>🌴 Bali — Indonésie</h3>
+
+        <h4>Padma Resort Ubud ★★★★★</h4>
+
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong>2 173 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>1 882,13 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>290,87 €</strong>
+            <span>soit 13,4 %</span>
+        </div>
+
+    </div>
+
+</div>
+              <div class="destination-card">
+
+    <img
+        src="cancun-occidental-tucancun.jpg"
+       alt="Occidental Tucancún All Inclusive à Cancún"
+        class="destination-image"
+    >
+
+    <div class="destination-info">
+
+        <h3>🌴 Cancún — Mexique</h3>
+
+       <h4>Occidental Tucancún All Inclusive ★★★★</h4>
+
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong>2 496 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>1 534,06 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>961,94 €</strong>
+            <span>soit 38,5 %</span>
+        </div>
+
+    </div>
+
+</div>
+   <div class="destination-card">
+
+    <img
+        src="ibiza-thb-ocean-beach.jpg"
+       alt="THB Ocean Beach Adults Only à Ibiza"
+        class="destination-image"
+    >
+
+    <div class="destination-info">
+
+        <h3>🌴 Ibiza — Espagne</h3>
+
+       <h4>THB Ocean Beach — Adults Only ★★★★</h4>
+
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong>2 360 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>1 922,05 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>437,95 €</strong>
+<span>soit 18,6 %</span>
+        </div>
+
+    </div>
+
+</div>
+<div class="destination-card">
+
+    <img
+       src="istanbul-glk-premier.jpg"
+       alt="GLK PREMIER Regency Suites & Spa à Istanbul"
+        class="destination-image"
+    >
+
+    <div class="destination-info">
+
+      <h3>🕌 Istanbul — Turquie</h3>
+       
+<h4>GLK PREMIER Regency Suites & Spa — Special Class</h4>
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong>4 638 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>1 452,06 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>3 185,94 €</strong>
+<span>soit 68,7 %</span>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="destination-card">
+
+    <img
+       src="maldives-barefoot-eco.jpg"
+       alt="The Barefoot Eco Hotel aux Maldives"
+        class="destination-image"
+    >
+
+    <div class="destination-info">
+
+      <h3>🏝️ Maldives</h3>
+       
+<h4>The Barefoot Eco Hotel ★★★★</h4>
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong>1 725 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>751,02 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>973,98 €</strong>
+<span>soit 56,5 %</span>
+        </div>
+
+    </div>
+
+</div>
+<div class="destination-card">
+
+    <img
+      src="marrakech-dar-anika.jpg"
+       alt="Riad Dar Anika à Marrakech"
+        class="destination-image"
+    >
+
+    <div class="destination-info">
+
+      <h3>🌴 Marrakech — Maroc</h3>
+       
+<h4>Riad Dar Anika ★★★★★</h4>
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong>2 359 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>1 545,06 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>813,94 €</strong>
+<span>soit 34,5 %</span>
+        </div>
+
+    </div>
+
+</div>
+<div class="destination-card">
+
+    <img
+      src="miami-andaz.jpg"
+       alt="Andaz Miami Beach Resort & Spa"
+        class="destination-image"
+    >
+
+    <div class="destination-info">
+
+      <h3>🌴 Miami — États-Unis</h3>
+       
+<h4>Andaz Miami Beach Resort & Spa ★★★★★</h4>
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong>2 818 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>1 282,06 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>1 535,94 €</strong>
+    <span>soit 54,5 %</span>
+        </div>
+
+    </div>
+
+</div>
+<div class="destination-card">
+
+    <img
+     
+    src="mykonos-pelican-bay-hotel.jpg"
+    alt="Pelican Bay Hotel Mykonos"
+    class="destination-image"
+>
+
+    <div class="destination-info">
+
+      <h3>🏝️ Mykonos — Grèce</h3>
+       
+<h4>Pelican Bay Hotel ★★★★</h4>
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong>2 175 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>1 282,05 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>892,95 €</strong>
+    <span>soit 41,1 %</span>
+        </div>
+
+    </div>
+
+</div>
+<div class="destination-card">
+
+    <img
+     
+   src="santorin-horizon-resort.jpg"
+    alt="Horizon Resort Santorin"
+    class="destination-image"
+>
+
+    <div class="destination-info">
+
+      <h3>🏝️ Santorin — Grèce</h3>
+       
+<h4>Horizon Resort ★★★</h4>
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong>1 065 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>531,02 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>533,98 €</strong>
+<span>soit 50,1 %</span>
+        </div>
+
+    </div>
+
+</div>
+<div class="destination-card">
+
+    <img
+     
+   src="seychelles-savoy.jpg"
+    alt="Savoy Seychelles Resort & Spa à Beau Vallon, Mahé"
+
+    class="destination-image"
+>
+
+    <div class="destination-info">
+
+      <h3>🌴 Seychelles – Beau Vallon</h3>
+       
+<h4>Savoy Seychelles Resort & Spa ★★★★★</h4>
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong> 3 276 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>2 540,06 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>735,94 €</strong>
+<span>soit 22,5 %</span>
+        </div>
+
+    </div>
+
+</div>
+<div class="destination-card">
+
+    <img
+     
+   src="sydney-ovolo-woolloomooloo.jpg"
+alt="Ovolo Sydney Woolloomooloo, a Wyndham Hotel à Sydney en Australie"
+
+    class="destination-image"
+>
+
+    <div class="destination-info">
+
+      <h3> 🌴 Sydney – Australie</h3>
+       
+<h4>Ovolo Sydney Woolloomooloo, a Wyndham Hotel ★★★★★</h4>
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong> 2 256 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>1 649,05 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>606,95 €</strong>
+<span>soit 26,9 %</span>
+        </div>
+
+    </div>
+
+</div>
+<div class="destination-card">
+
+    <img
+     
+  src="phuket-dinso-resort.jpg"
+alt="Dinso Resort & Villas Phuket, Vignette Collection by IHG à Patong, Phuket"
+
+
+    class="destination-image"
+>
+
+    <div class="destination-info">
+
+      <h3>🌴 Phuket – Thaïlande</h3>
+       
+<h4>Dinso Resort & Villas Phuket, Vignette Collection by IHG ★★★★★</h4>
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong> 1 708 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>1 228,06 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>479,94 €</strong>
+<span>soit 28,1 %</span>
+        </div>
+
+    </div>
+
+</div>
+<div class="destination-card">
+
+    <img
+     
+  src="tokyo-new-otani.jpg"
+alt="Hotel New Otani Tokyo The Main à Tokyo"
+
+
+    class="destination-image"
+>
+
+    <div class="destination-info">
+
+   </h3> 🌴 Tokyo – Japon <h3>
+       
+<h4> Hotel New Otani Tokyo The Main ★★★★★ <h4>
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong> 2 204 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>1 651,05 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>552,95 €</strong>
+<span>soit 25,09 %</span>
+        </div>
+
+    </div>
+
+</div>
+<div class="destination-card">
+
+    <img
+    src="venise-ca-bonfadini.jpg"
+    alt="Ca' Bonfadini Historic Experience à Venise"
+    class="destination-image"
+>
+
+<div class="destination-info">
+
+    <h3>🌴 Venise – Italie</h3>
+
+    <h4>Ca' Bonfadini Historic Experience ★★★★★</h4>
+        <p class="comparison-dates">
+            7 nuits • 2 adultes • 12 au 19 septembre 2026
+        </p>
+
+        <div class="price-comparison">
+
+            <div class="public-price">
+                <span>Booking</span>
+                <strong>4 847 €</strong>
+            </div>
+
+            <div class="member-price">
+                <span>Travel Advantage</span>
+                <strong>4 300,06 €</strong>
+            </div>
+
+        </div>
+
+        <div class="saving">
+            ✨ Vous économisez
+            <strong>546,94 €</strong>
+<span>soit 11,28 %</span>
+        </div>
+
+    </div>
+
+</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
