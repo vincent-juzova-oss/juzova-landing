@@ -796,7 +796,7 @@ transform: translate(-50%, -50%);
 
 #close-thomas-visual {
     position: absolute;
-    top: -14px;
+    top: -28px;
     right: -14px;
     width: 38px;
     height: 38px;
@@ -813,7 +813,8 @@ transform: translate(-50%, -50%);
     display: inline-block;
 
     position: absolute;
-    top: calc(100% + 12px);
+    top: auto;
+bottom: 92px;
 left: 50%;
     transform: translateX(-50%);
     z-index: 3001;
@@ -1451,6 +1452,22 @@ height: 24px;
 }
 
 @media (max-width: 600px) {
+    /* Thomas adapté au téléphone */
+.thomas-workspace .agentova-chat {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+
+    height: calc(100dvh - 24px) !important;
+    max-height: calc(100dvh - 24px) !important;
+
+    overflow: hidden;
+    border-radius: 18px;
+}
 
   .navigation {
     padding-left: 10px;
@@ -1513,5 +1530,94 @@ height: 24px;
     white-space: nowrap;
     display: block;
     font-size: 20px;
+}
+}
+@media (max-width: 600px) {
+
+    .thomas-workspace {
+        position: fixed !important;
+        inset: 0 !important;
+        width: 100vw !important;
+        height: 100dvh !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;
+        z-index: 9999 !important;
+    }
+
+    #agentova-chat {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+
+    width: calc(100vw - 20px) !important;
+    max-width: calc(100vw - 20px) !important;
+
+    height: calc(100dvh - 20px) !important;
+    max-height: calc(100dvh - 20px) !important;
+
+    margin: 0 !important;
+    overflow: hidden !important;
+    border-radius: 18px !important;
+    z-index: 10000 !important;
+}
+#thomas-visual {
+    position: fixed !important;
+
+    top: 10px !important;
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 10px !important;
+
+    transform: none !important;
+
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+
+    z-index: 10001 !important;
+    overflow: auto !important;
+
+}
+.thomas-slide-trigger {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 105px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 10002 !important;
+    white-space: nowrap !important;
+}
+#agentova-chat iframe {
+    height: calc(100% - 120px) !important;
+}
+
+.thomas-slide-trigger {
+    top: auto !important;
+    bottom: 58px !important;
+}
+@media (max-width: 768px) {
+    #agentova-chat {
+        background: #fff !important;
+    }
+}
+@media (max-width: 768px) {
+    #close-thomas-visual {
+        top: 2px !important;
+        right: 4px !important;
+    }
+}
+.thomas-slide-modal {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.thomas-slide-modal img {
+    width: 104vw !important;
+    max-width: 104vw !important;
+    margin-left: calc(50% - 52vw) !important;
 }
 }
