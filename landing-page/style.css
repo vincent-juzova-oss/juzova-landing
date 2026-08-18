@@ -1471,4 +1471,11 @@ height: 24px;
     width: 100%;
     max-width: 100%;
   }
+  /* Mise en avant menu mobile */
+#open-videos,
+#open-inspirations,
+#open-petit-budget {
+    color: #d4af37;
+    font-weight: 700;
+}
 }
