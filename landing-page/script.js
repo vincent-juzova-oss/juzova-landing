@@ -465,3 +465,28 @@ if (inspirationsButton && inspirationsModal && closeInspirations) {
         }
     });
 }
+// =========================
+// OUVERTURE FENÊTRE PETIT BUDGET
+// =========================
+
+const petitBudgetButton = document.getElementById("open-petit-budget");
+const petitBudgetModal = document.getElementById("petit-budget-modal");
+const closePetitBudget = document.getElementById("close-petit-budget");
+
+if (petitBudgetButton && petitBudgetModal && closePetitBudget) {
+
+    petitBudgetButton.addEventListener("click", function(e) {
+        e.preventDefault();
+        petitBudgetModal.style.display = "flex";
+    });
+
+    closePetitBudget.addEventListener("click", function() {
+        petitBudgetModal.style.display = "none";
+    });
+
+    petitBudgetModal.addEventListener("click", function(e) {
+        if (e.target === petitBudgetModal) {
+            petitBudgetModal.style.display = "none";
+        }
+    });
+}
