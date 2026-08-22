@@ -85,6 +85,7 @@ if (agentovaChat) {
   openThomasButtons.forEach((button) => {
     button.addEventListener("click", () => {
       agentovaChat.style.display = "block";
+      
     });
   });
 }
@@ -94,7 +95,7 @@ const openAgentova = document.getElementById("open-agentova");
 if (openAgentova && agentovaChat) {
   openAgentova.addEventListener("click", () => {
     agentovaChat.style.display = "block";
-    grossisteTrigger.style.display = "inline-block";
+   grossisteTrigger.style.display = "inline-block";
   });
 }
 const closeAgentovaChat = document.getElementById("close-agentova-chat");

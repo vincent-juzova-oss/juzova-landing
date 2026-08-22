@@ -813,8 +813,8 @@ transform: translate(-50%, -50%);
     display: inline-block;
 
     position: absolute;
-    top: auto;
-bottom: 92px;
+    top: calc(100% + 12px);
+bottom: auto;
 left: 50%;
     transform: translateX(-50%);
     z-index: 3001;
@@ -1595,10 +1595,6 @@ height: 24px;
     height: calc(100% - 120px) !important;
 }
 
-.thomas-slide-trigger {
-    top: auto !important;
-    bottom: 58px !important;
-}
 @media (max-width: 768px) {
     #agentova-chat {
         background: #fff !important;
