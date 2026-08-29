@@ -119,6 +119,8 @@ if (openAgentovaQuestion && agentovaChat) {
 
 const thomasVisual = document.getElementById("thomas-visual");
 const thomasVisualImage = document.getElementById("thomas-visual-image");
+const thomasVisualCaption = document.getElementById("thomas-visual-caption");
+const inclusPdfLink = document.getElementById("inclus-pdf-link");
 const closeThomasVisual = document.getElementById("close-thomas-visual");
 
 function showThomasVisual(imagePath) {
@@ -188,6 +190,24 @@ const revenuSlideOrder = [
     thomasSlides.revenu_pour_qui,
     thomasSlides.revenu_demarrer
 ];
+const inclusSlideOrder = [
+    "inclus_avantages.PNG",
+    "inclus_agenda.PNG",
+    "inclus_inscription.PNG",
+    "inclus_elite_turbo.PNG",
+    "inclus_points_tarifs.PNG"
+];
+const inclusCaptions = [
+    "À retenir : un ensemble d’outils et d’accompagnement pour développer votre activité : back office, formations, communauté French Team, outils numériques et applications.",
+    
+    "À retenir : la French Team propose des rendez-vous réguliers chaque semaine pour se former, échanger et avancer ensemble.",
+    
+    "À retenir : les formules donnent accès aux principaux outils comme le Back Office, les formations, Skool, la carte MWR et les applications.",
+    
+    "À retenir : Elite reçoit 120 Points fidélité par mois. Elite Turbo en reçoit 240 par mois et bénéficie d’avantages supplémentaires présentés sur cette slide.",
+    
+    "À retenir : le montant de départ inclut la formule choisie et la licence. Les équivalents en euros sont indicatifs et peuvent varier selon le taux de change."
+];
 let currentVoyageSlideIndex = 0;
 const thomasVisualPrev = document.getElementById("thomas-visual-prev");
 const thomasVisualNext = document.getElementById("thomas-visual-next");
@@ -223,12 +243,32 @@ if (slidesRevenusButton) {
         setActiveSlideOrder(revenuSlideOrder);
     });
 }
+const slidesInclusButton = document.getElementById("slides-inclus");
+
+if (slidesInclusButton) {
+    slidesInclusButton.addEventListener("click", () => {
+        setActiveSlideOrder(inclusSlideOrder);
+    });
+}
 function updateVoyageSlide() {
     const currentSlide = activeSlideOrder[currentVoyageSlideIndex];
 
     if (thomasVisualImage) {
         thomasVisualImage.src = currentSlide;
     }
+    if (thomasVisualCaption) {
+    if (activeSlideOrder === inclusSlideOrder) {
+        thomasVisualCaption.textContent = inclusCaptions[currentVoyageSlideIndex];
+        thomasVisualCaption.style.display = "block";
+    } else {
+        thomasVisualCaption.textContent = "";
+        thomasVisualCaption.style.display = "none";
+    }
+}
+if (inclusPdfLink) {
+    inclusPdfLink.style.display =
+        activeSlideOrder === inclusSlideOrder ? "inline-flex" : "none";
+}
 
     if (thomasVisualCounter) {
         thomasVisualCounter.textContent =
