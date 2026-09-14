@@ -1,3 +1,51 @@
+// ================================
+// DATES DYNAMIQUES DES COMPARATIFS
+// Calcule automatiquement une periode de 7 nuits a partir
+// d'aujourd'hui, pour que les dates affichees ne soient jamais
+// depassees. Modifie ici pour changer le delai (actuellement 21
+// jours a partir d'aujourd'hui).
+// ================================
+(function () {
+    const MONTHS_FR = [
+        "janvier", "février", "mars", "avril", "mai", "juin",
+        "juillet", "août", "septembre", "octobre", "novembre", "décembre"
+    ];
+
+    const DAYS_FROM_NOW = 21;
+    const STAY_LENGTH_NIGHTS = 7;
+
+    const start = new Date();
+    start.setDate(start.getDate() + DAYS_FROM_NOW);
+
+    const end = new Date(start);
+    end.setDate(end.getDate() + STAY_LENGTH_NIGHTS);
+
+    function formatRange(start, end) {
+        const startDay = start.getDate();
+        const endDay = end.getDate();
+        const endMonth = MONTHS_FR[end.getMonth()];
+        const year = end.getFullYear();
+
+        if (start.getMonth() === end.getMonth()) {
+            return `${startDay} au ${endDay} ${endMonth} ${year}`;
+        }
+
+        const startMonth = MONTHS_FR[start.getMonth()];
+        return `${startDay} ${startMonth} au ${endDay} ${endMonth} ${year}`;
+    }
+
+    const range = formatRange(start, end);
+
+    document.querySelectorAll(".comparison-dates").forEach((el) => {
+        el.textContent = `${STAY_LENGTH_NIGHTS} nuits • 2 adultes • ${range}`;
+    });
+
+    const intro = document.querySelector(".comparison-intro");
+    if (intro) {
+        intro.textContent = `Même période pour les 3 séjours · ${STAY_LENGTH_NIGHTS} nuits · 2 adultes · du ${range}`;
+    }
+})();
+
 const openThomas = document.getElementById("openThomas");
 const thomasPanel = document.getElementById("thomas-panel");
 const closeThomas = document.querySelector("[data-close-thomas]");
