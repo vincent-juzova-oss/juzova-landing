@@ -1164,6 +1164,61 @@ height: 24px;
     cursor: pointer;
 }
 
+.access-request-form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.access-request-form input{
+    width: 100%;
+    padding: 13px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(212,175,55,.35);
+    background: rgba(255,255,255,.06);
+    color: #fff;
+    font-size: 15px;
+}
+
+.access-request-form input::placeholder{
+    color: #9c9c9c;
+}
+
+.access-request-form input:focus{
+    outline: none;
+    border-color: #d4af37;
+}
+
+.access-request-form button{
+    width: 100%;
+    border: none;
+}
+
+.access-request-form button:disabled{
+    opacity: .7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.access-request-message{
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    color: #d5d5d5;
+}
+
+.access-request-message.access-request-error{
+    color: #e77;
+}
+
+.access-locked-alt-link{
+    display: inline-block;
+    color: #d4af37;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
 /* =========================
    FENÊTRE VIDÉOS
 ========================= */

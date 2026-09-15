@@ -261,12 +261,43 @@
         <h2>Cet assistant est disponible sur invitation</h2>
         <p>
             Thomas est réservé aux personnes invitées personnellement par un
-            membre JUZOVA. Si cette page vous a été partagée par quelqu'un,
-            demandez-lui son lien personnel. Sinon, vous pouvez prendre
-            rendez-vous directement avec nous pour en discuter.
+            membre JUZOVA. Entrez votre prénom et votre email : vous recevrez
+            votre lien d'accès personnel par email en quelques secondes.
         </p>
-        <a class="button button-primary" href="https://calendar.app.google/DG9ZLn327Crxk7m77" target="_blank" rel="noopener">
-            Prendre rendez-vous
+
+        <form id="access-request-form" class="access-request-form">
+            <input
+                type="text"
+                id="access-request-name"
+                name="name"
+                placeholder="Votre prénom"
+                autocomplete="given-name"
+                required
+            >
+            <input
+                type="email"
+                id="access-request-email"
+                name="email"
+                placeholder="Votre email"
+                autocomplete="email"
+                required
+            >
+            <button class="button button-primary" type="submit" id="access-request-submit">
+                Recevoir mon accès par email
+            </button>
+        </form>
+
+        <p id="access-request-success" class="access-request-message" hidden>
+            ✅ C'est envoyé&nbsp;! Regardez votre boîte mail (et vos spams) pour
+            récupérer votre lien d'accès à Thomas.
+        </p>
+        <p id="access-request-error" class="access-request-message access-request-error" hidden>
+            Une erreur est survenue. Vous pouvez réessayer, ou prendre
+            rendez-vous directement avec nous ci-dessous.
+        </p>
+
+        <a class="access-locked-alt-link" href="https://calendar.app.google/DG9ZLn327Crxk7m77" target="_blank" rel="noopener">
+            Ou prendre rendez-vous directement
         </a>
     </div>
 </div>
@@ -1441,6 +1472,7 @@ alt="Business Hotel Tunis à Tunis"
 </div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

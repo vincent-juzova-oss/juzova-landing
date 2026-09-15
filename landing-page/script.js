@@ -220,6 +220,65 @@ if (openAgentovaQuestion && agentovaChat) {
   });
 }
 
+// ========================================
+// DEMANDE D'ACCÈS AUTOMATIQUE (EmailJS)
+// Envoie automatiquement le lien d'accès à Thomas par email,
+// sans intervention de Vincent. Ces identifiants viennent du
+// compte EmailJS (dashboard.emailjs.com).
+// ========================================
+const EMAILJS_PUBLIC_KEY = "5ccrHYCuiqa5swpBa";
+const EMAILJS_SERVICE_ID = "service_mywhvlv";
+const EMAILJS_TEMPLATE_ID = "template_v2p6shi";
+
+if (window.emailjs) {
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+}
+
+const accessRequestForm = document.getElementById("access-request-form");
+const accessRequestSubmit = document.getElementById("access-request-submit");
+const accessRequestSuccess = document.getElementById("access-request-success");
+const accessRequestError = document.getElementById("access-request-error");
+
+if (accessRequestForm) {
+  accessRequestForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const nameField = document.getElementById("access-request-name");
+    const emailField = document.getElementById("access-request-email");
+    const name = nameField ? nameField.value.trim() : "";
+    const email = emailField ? emailField.value.trim() : "";
+
+    if (!name || !email || !window.emailjs) {
+      return;
+    }
+
+    if (accessRequestError) accessRequestError.hidden = true;
+    accessRequestSubmit.disabled = true;
+    accessRequestSubmit.textContent = "Envoi en cours...";
+
+    emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { name: name, email: email })
+      .then(function () {
+        try {
+          localStorage.setItem("juzova_parrain", "vincent");
+        } catch (e) {}
+
+        accessRequestForm.hidden = true;
+        if (accessRequestSuccess) accessRequestSuccess.hidden = false;
+
+        setTimeout(function () {
+          if (accessLockedModal) accessLockedModal.style.display = "none";
+          if (agentovaChat) agentovaChat.style.display = "block";
+        }, 1800);
+      })
+      .catch(function () {
+        accessRequestSubmit.disabled = false;
+        accessRequestSubmit.textContent = "Recevoir mon accès par email";
+        if (accessRequestError) accessRequestError.hidden = false;
+      });
+  });
+}
+
 // =========================================
 // SUPPORTS VISUELS DE THOMAS
 // =========================================
