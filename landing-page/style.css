@@ -1103,6 +1103,68 @@ height: 24px;
     pointer-events: auto;
 }
 /* =========================
+   ACCÈS RÉSERVÉ THOMAS
+========================= */
+
+.access-locked-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.access-locked-window {
+    position: relative;
+    width: min(520px, 92vw);
+    background: linear-gradient(145deg, rgba(212,175,55,.10), rgba(20,20,20,.97));
+    border: 1px solid rgba(212,175,55,.30);
+    border-radius: 24px;
+    padding: 45px 35px;
+    text-align: center;
+}
+
+.access-locked-kicker {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.access-locked-window h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.access-locked-window p {
+    color: #d5d5d5;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.access-locked-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+    color: #fff;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* =========================
    FENÊTRE VIDÉOS
 ========================= */
 

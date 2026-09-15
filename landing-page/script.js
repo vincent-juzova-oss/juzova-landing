@@ -127,13 +127,68 @@ panelBackdrop.classList.add("open");
     });
   });
 }
+// ========================================
+// ACCÈS RÉSERVÉ À THOMAS (CODE PARRAIN)
+// Thomas n'est accessible que via un lien personnel contenant
+// ?parrain=CODE (celui de Vincent ou d'un futur associé). Pour
+// ajouter un associé, ajoutez son code (en minuscules) dans la
+// liste ci-dessous, puis donnez-lui son propre lien, par exemple :
+// https://.../?parrain=soncode
+// ========================================
+const CODES_PARRAINS_VALIDES = ["vincent"];
+
+function verifierAccesThomas() {
+  const params = new URLSearchParams(window.location.search);
+  const codeUrl = (params.get("parrain") || "").toLowerCase().trim();
+
+  if (codeUrl && CODES_PARRAINS_VALIDES.includes(codeUrl)) {
+    try {
+      localStorage.setItem("juzova_parrain", codeUrl);
+    } catch (e) {}
+    return true;
+  }
+
+  try {
+    const codeStocke = localStorage.getItem("juzova_parrain");
+    if (codeStocke && CODES_PARRAINS_VALIDES.includes(codeStocke)) {
+      return true;
+    }
+  } catch (e) {}
+
+  return false;
+}
+
+const accessLockedModal = document.getElementById("access-locked-modal");
+const closeAccessLocked = document.getElementById("close-access-locked");
+
+function ouvrirThomasOuBloquer(callbackSiAutorise) {
+  if (verifierAccesThomas()) {
+    callbackSiAutorise();
+  } else if (accessLockedModal) {
+    accessLockedModal.style.display = "flex";
+  }
+}
+
+if (closeAccessLocked && accessLockedModal) {
+  closeAccessLocked.addEventListener("click", () => {
+    accessLockedModal.style.display = "none";
+  });
+
+  accessLockedModal.addEventListener("click", (event) => {
+    if (event.target === accessLockedModal) {
+      accessLockedModal.style.display = "none";
+    }
+  });
+}
+
 const agentovaChat = document.getElementById("agentova-chat");
 
 if (agentovaChat) {
   openThomasButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      agentovaChat.style.display = "block";
-      
+      ouvrirThomasOuBloquer(() => {
+        agentovaChat.style.display = "block";
+      });
     });
   });
 }
@@ -142,8 +197,10 @@ const openAgentova = document.getElementById("open-agentova");
 
 if (openAgentova && agentovaChat) {
   openAgentova.addEventListener("click", () => {
-    agentovaChat.style.display = "block";
-   grossisteTrigger.style.display = "inline-block";
+    ouvrirThomasOuBloquer(() => {
+      agentovaChat.style.display = "block";
+      grossisteTrigger.style.display = "inline-block";
+    });
   });
 }
 const closeAgentovaChat = document.getElementById("close-agentova-chat");
@@ -157,7 +214,9 @@ const openAgentovaQuestion = document.getElementById("open-agentova-question");
 
 if (openAgentovaQuestion && agentovaChat) {
   openAgentovaQuestion.addEventListener("click", () => {
-    agentovaChat.style.display = "block";
+    ouvrirThomasOuBloquer(() => {
+      agentovaChat.style.display = "block";
+    });
   });
 }
 
