@@ -378,8 +378,18 @@ overflow: hidden;
 }
 
 .button:hover{
-    transform:translateY(-2px);
-}   .thomas-button{
+    transform:translateY(-2px) scale(1.03);
+}
+
+.button-primary:hover{
+    box-shadow:0 12px 28px rgba(212,175,55,.45);
+}
+
+.button-secondary:hover{
+    background:rgba(255,255,255,.14);
+    border-color:rgba(212,175,55,.6);
+}
+   .thomas-button{
     width:100%;
     margin-top:20px;
     padding:14px 20px;
@@ -395,8 +405,8 @@ overflow: hidden;
 }
 
 .thomas-button:hover{
-    transform:translateY(-2px);
-    box-shadow:0 12px 28px rgba(212,175,55,.35);
+    transform:translateY(-2px) scale(1.02);
+    box-shadow:0 12px 28px rgba(212,175,55,.45);
 }
 /* ==========================
    SECTION POURQUOI JUZOVA
@@ -1370,8 +1380,9 @@ height: 24px;
 }
 
 .video-card-choice:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
     border-color: #d4af37;
+    box-shadow: 0 14px 32px rgba(212, 175, 55, 0.3);
 }
 
 .video-thumbnail {
